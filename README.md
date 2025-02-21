@@ -1,43 +1,81 @@
-## Leitor de Código de Barras e QR Code
+# barQRCodeReader
 
-![Lendo Código de barras](barcode.gif)
+Um projeto em C++ que utiliza OpenCV e ZBar para detectar e ler QR codes e códigos de barras em tempo real a partir da webcam.
 
-Este repositório contém um leitor de código de barras e QR code simples usando a biblioteca OpenCV e ZBar. O código é escrito em C++ e pode ser compilado em qualquer plataforma que suporte o OpenCV e o ZBar.
+## Descrição
 
-## Como usar
+Este projeto é um exemplo prático de como usar a biblioteca OpenCV para capturar vídeo da webcam e a biblioteca ZBar para detectar e decodificar QR codes e códigos de barras. O programa exibe as informações decodificadas na tela e desenha um retângulo ao redor do código detectado.
 
-Para usar o leitor de código de barras e QR code, basta executar o arquivo executável `bar_qr_webcam.exe`. O programa abrirá uma janela com a imagem da webcam. Quando um código de barras ou QR code for detectado, o programa exibirá o tipo e os dados do código na tela.
+## Funcionalidades
 
-## Dependências
+- Detecção de QR codes e códigos de barras em tempo real.
+- Exibição das informações decodificadas no terminal e na janela da webcam.
+- Desenho de um retângulo ao redor do código detectado.
+- Fácil integração com sistemas que necessitam de leitura de códigos.
 
-  * OpenCV
-  * ZBar
+## Demonstração
 
-## Instalação
+### Leitura de Código de Barras
 
-Para instalar o OpenCV e o ZBar, você pode seguir as instruções do site oficial de cada biblioteca.
+![Leitura de Código de Barras](barcode.gif)
 
-## Contribuições
+### Leitura de QR Code
 
-Contribuições para este repositório são bem-vindas. Se você encontrar algum problema ou tiver alguma sugestão, por favor, abra um problema ou envie um pull request.
+![Leitura de QR Code](QRCodeCPP.gif)
+
+## Como Usar
+
+### Pré-requisitos
+
+- Compilador C++ (g++ ou similar).
+- OpenCV instalado.
+- ZBar instalado.
+
+### Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/barQRCodeReader.git
+   cd barQRCodeReader
+   ```
+
+2. Compile o código:
+   ```bash
+   g++ -I"C:/msys64/mingw64/include/opencv4" -I"C:/msys64/mingw64/include/zbar" -o barcode_qr_webcam barcode_qr_webcam.cpp -L"C:/msys64/mingw64/lib" -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_videoio -lzbar
+   ```
+
+### Execução
+
+Execute o programa:
+```bash
+./barcode_qr_webcam
+```
+
+### Controles
+
+- **Pressione `q`** para sair do programa.
+
+## Estrutura do Projeto
+
+```
+barQRCodeReader/
+├── barcode_qr_webcam.cpp  # Código-fonte principal
+├── barcode_qr_webcam.exe  # Executável (após compilação)
+├── README.md              # Este arquivo
+├── barcode.gif            # GIF de demonstração (código de barras)
+└── QRCodeCPP.gif          # GIF de demonstração (QR code)
+```
+
+## Contribuição
+
+Contribuições são bem-vindas! Siga os passos abaixo:
+
+1. Faça um fork do projeto.
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`).
+3. Commit suas mudanças (`git commit -m 'Adicionando nova feature'`).
+4. Push para a branch (`git push origin feature/nova-feature`).
+5. Abra um Pull Request.
 
 ## Licença
 
-Este repositório é licenciado sob a licença MIT.
-
-## Autor
-
-Este repositório foi criado por Vitor Domingues.
-
-## Contato
-
-Você pode entrar em contato com o autor através do e-mail [vdmrvitor@gmail.com].
-
-## Documentação
-
-A documentação deste repositório está disponível em [README.md](https://www.google.com/url?sa=E&source=gmail&q=README.md).
-
-## Recursos
-
-  * [OpenCV](https://www.google.com/url?sa=E&source=gmail&q=https://opencv.org/)
-  * [ZBar](https://www.google.com/search?q=https://github.com/ZBar/zbar)
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
