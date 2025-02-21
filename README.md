@@ -1,6 +1,6 @@
 ## Leitor de Código de Barras e QR Code
 
-![Lendo Código de barras](/barQRCodeReader/barcode.gif)
+![Lendo Código de barras](barcode.gif)
 
 Este repositório contém um leitor de código de barras e QR code simples usando a biblioteca OpenCV e ZBar. O código é escrito em C++ e pode ser compilado em qualquer plataforma que suporte o OpenCV e o ZBar.
 
