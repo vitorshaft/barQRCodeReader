@@ -35,7 +35,7 @@ Este projeto é um exemplo prático de como usar a biblioteca OpenCV para captur
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/barQRCodeReader.git
+   git clone https://github.com/vitorshaft/barQRCodeReader.git
    cd barQRCodeReader
    ```
 
